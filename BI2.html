@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> BI </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="shortcut icon" href="./guide2/favicon.png" type="image/x-icon">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+		body{
+			background-color: #fff;
+		}
+
+		.fixed_box {
+			position: fixed;
+			bottom: 40px;
+			right: 30px;
+			width: 40px;
+		}
+
+		#top {
+			max-width: 1320px;
+			margin: 0 auto;
+		}
+
+		#top img {
+			width: 100%;
+			display: block;
+		}
+
+		/*top*/
+       #top_btn{
+           position: fixed;
+           right: 50px;
+           bottom: 60px;
+           z-index: 50;
+        }
+       #top_btn p{
+          position: relative;
+          animation: rotate 4s linear 2s infinite;
+        }
+       #top_btn .up{
+          position: absolute;
+          top: 28px;
+          left: 28px;
+        }
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<!--완성된 pdf 이미지를 1320크기로 뽑아서, 죽 나열하시면 됩니다!-->
+	<div id="top">
+		<img src="./guide2/1.jpg" class="guide1"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/2.jpg" class="guide2"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/3.jpg" class="guide3"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/4.jpg" class="guide4"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/5.jpg" class="guide5"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/6.jpg" class="guide6"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/7.jpg" class="guide7"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/8.jpg" class="guide8"><!--가이드 이미지 경로 지정하기-->
+		<img src="./guide2/9.jpg" class="guide9"><!--가이드 이미지 경로 지정하기-->
+
+	</div>
+	
+
+	<!--<div id="top_btn">
+		<p><a href="#"><img src="./guide/logo_ani_green.png" alt="탑버튼애니메이션"></a></p>
+		<a href="#"><img src="./guide/top_btn.png" alt="탑_화살표이미지" class="up"></a>
+	</div> -->
+
+
+	<!--이동시 부드럽게 이동시키기 위해 추가한 구문 시작. script쪽 전부 삭제가능.-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			$('a[href*="#"]:not([href="#"])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 500);//움직이는 시간 조정
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+	<!--이동시 부드럽게 이동시키기 위해 추가한 구문 끝. 삭제가능.-->
+</body>
+
+</html>
