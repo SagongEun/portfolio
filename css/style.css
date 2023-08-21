@@ -512,6 +512,20 @@ h1, h2, h3, h4, h5, h6, figure {
   background-color: #da5252;
 }
 
+.project_btn_box .project_btn6{
+  font-family: 'SDSamliphopangche_Basic';
+  color: #fff;
+  background-color: #5bc74d;
+  /*background: linear-gradient(to left, #2db671, #2771af);*/
+  border-radius: 30px;
+  padding: 5px 20px;
+  display: inline-block;
+  border: 1px solid #fff;  
+}
+.project_btn6:hover{
+  background-color: #2834a3;
+}
+
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
